@@ -1,6 +1,5 @@
 import { posts } from "@/data/posts.data";
 import { FlatList, Text, View, StyleSheet, Image, Pressable} from "react-native";
-import { Link } from "expo-router";
 import { GlobalStyles } from "@/src/theme/GlobalStyles";
 
 
@@ -94,7 +93,7 @@ const styles = StyleSheet.create({
     color: "#194A6E",
   },
   comentarioPeli: {
-    fontSize: 18,
+    fontSize: 19,
     marginRight: 10,
     marginTop: -20,
     textAlign: "right",
@@ -103,7 +102,7 @@ const styles = StyleSheet.create({
     width: 27,
     height: 27,
     top: -25,
-    left: 275,
+    left: "80%",
   },
   botonComunidad:{
     width: "27%",
