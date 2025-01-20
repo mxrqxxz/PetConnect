@@ -1,9 +1,11 @@
 export const Tamanos = {
     weightMediano: 300,
     weightGrande: 400,
-    textoGrande: 70,
-    textoMediano: 30,
-    textoChico: 20,
-    alturaFoto: 230,
-    anchoFoto: 180,
+    textoTitulo: 35,
+    textoGrande: 48,
+    textoMediano: 20,
+    textoChico: 12,
+    textoNotificacion: 18,
+    alturaFoto: 100,
+    anchoFoto: 103,
 }as const;

@@ -4,6 +4,7 @@ import { Tamanos } from './Tamanos';
 
 export const GlobalStyles = StyleSheet.create({
     container: {
+        backgroundColor: Colores.colorFondo,
         minHeight: '100%',
         flex: 1,
         flexDirection: 'column',
@@ -28,5 +29,34 @@ export const GlobalStyles = StyleSheet.create({
         height: Tamanos.alturaFoto,
         borderRadius: 10,
     },
+    zonaPerfl:{
+        flexDirection: 'row',
+        gap: 15,
+        margin: 25,
+    },
+    textoNormal: {
+        fontFamily: 'Roboto2',
+        fontSize: Tamanos.textoChico,
+        color: Colores.colorTextoNormal,
+    },
+    textoNegroNormal: {
+        fontFamily: 'Roboto2',
+        fontSize: Tamanos.textoChico,
+        color: Colores.textoNegro,
+    },
+    textoNegroMediano: {
+        fontFamily: 'Roboto2',
+        fontSize: Tamanos.textoMediano,
+        color: Colores.textoNegro,
+    },
+    textoNegrita: {
+        fontWeight: 'bold',
+    },
+    textoSubrayado: {
+        textDecorationLine: 'underline',
+    },
+    centradoVertical: {
+        justifyContent: 'center',
+    }
     
 });
