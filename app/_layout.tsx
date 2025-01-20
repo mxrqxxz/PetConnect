@@ -4,6 +4,8 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { Image } from 'react-native';
+import { GlobalStyles } from '@/src/theme/GlobalStyles';
 
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -39,7 +41,13 @@ export default function RootLayout() {
         fontFamily: 'WendyOne',
       },
       headerTitleAlign: 'center',
+      headerRight: () => {
+        return (
+          <Image source={require('../assets/images/logoPetConnect.png')} style={GlobalStyles.imagenStack}/>
+        )
+      },
     }}>
+    
     <Stack.Screen
       name='index'
       options={{title: 'LOGIN', }}/>

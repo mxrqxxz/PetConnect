@@ -10,6 +10,11 @@ export const GlobalStyles = StyleSheet.create({
         flexDirection: 'column',
         gap: 20,
     },
+    imagenStack: {
+        width: 40,
+        height: 40,
+        marginLeft: 10,
+    },
     peliculaPreview: {
         padding: 10,
         margin: 10,
