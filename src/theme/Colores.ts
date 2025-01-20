@@ -15,4 +15,6 @@ export const Colores = {
     stackBarColorLetra: 'white',
     colorTextoNormal: '#194A6E',
     textoNegro: 'black',
+    textoBlanco: 'white',
+    naranja: "#FDB672"
 }as const;

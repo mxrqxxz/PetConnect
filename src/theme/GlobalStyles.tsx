@@ -8,7 +8,7 @@ export const GlobalStyles = StyleSheet.create({
         minHeight: '100%',
         flex: 1,
         flexDirection: 'column',
-        gap: 20,
+        gap: 10,
     },
     imagenStack: {
         width: 40,
@@ -32,7 +32,7 @@ export const GlobalStyles = StyleSheet.create({
     zonaPerfl:{
         flexDirection: 'row',
         gap: 15,
-        margin: 25,
+        margin: 25
     },
     textoNormal: {
         fontFamily: 'Roboto2',
@@ -57,6 +57,45 @@ export const GlobalStyles = StyleSheet.create({
     },
     centradoVertical: {
         justifyContent: 'center',
+    },
+    notificacionCuadro:{
+        backgroundColor: Colores.naranja,
+        paddingTop: 15,
+        borderWidth: 1,
+        borderRadius: 10,
+        marginHorizontal: 25,
+    },
+    notificacionCuadroTitulo:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    fotoNotificacionFlecha: {
+        width: 18,
+        height: 11,
+        marginRight: 20,
+        marginTop: 5,
+    },
+    notificacion: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        borderTopWidth: 1,
+        gap: 20,
+        padding: 10,
+    },
+    textoNotificacionesTitulo:{
+        flexShrink: 1, // se hace un poco más pequeño para que quepa la flecha
+        fontFamily: "WendyOne",
+        fontSize: Tamanos.textoMediano,
+        color: Colores.textoBlanco,
+        marginLeft: 10,
+        paddingBottom: 15,
+    },
+    fotoNotificacion: {
+        width: 30,
+        height: 30,
+    },
+    enLinea: {
+        flexDirection: 'row',
     }
     
 });
