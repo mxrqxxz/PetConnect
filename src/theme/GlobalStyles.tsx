@@ -15,6 +15,15 @@ export const GlobalStyles = StyleSheet.create({
         height: 40,
         marginLeft: 10,
     },
+    lista: {
+        padding: 10,
+        margin: 10,
+        borderRadius: 10,
+        borderColor: Colores.colorBordePreview,
+        borderWidth: 3,
+        backgroundColor: Colores.colorFondoTarjeta,
+        fontWeight: "bold"
+    },
     peliculaPreview: {
         padding: 10,
         margin: 10,

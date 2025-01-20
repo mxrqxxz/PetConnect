@@ -55,7 +55,7 @@ export default function RootLayout() {
       name='registro/index'
       options={{title: 'REGISTRO'}}/>
     <Stack.Screen
-      name='inicio/index'
+      name='principal/index'
       options={{title: 'INICIO'}}/>
     <Stack.Screen 
       name='comunidad/index'
