@@ -1,5 +1,5 @@
 export const Colores = {
-    colorFondo: '#221F1F',
+    colorFondo: 'white',
     colorBordeBoton: '#E50914',
     colorBoton: '#505050',
     colorTextoPantalla: 'white',
@@ -13,4 +13,6 @@ export const Colores = {
 
     stackBar: '#366288',
     stackBarColorLetra: 'white',
+    colorTextoNormal: '#194A6E',
+    textoNegro: 'black',
 }as const;

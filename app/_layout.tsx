@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { Image } from 'react-native';
 import { GlobalStyles } from '@/src/theme/GlobalStyles';
+import { Tamanos } from '@/src/theme/Tamanos';
 
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -39,6 +40,7 @@ export default function RootLayout() {
       headerTintColor: Colores.stackBarColorLetra,
       headerTitleStyle: {
         fontFamily: 'WendyOne',
+        fontSize: Tamanos.textoTitulo
       },
       headerTitleAlign: 'center',
       headerRight: () => {
