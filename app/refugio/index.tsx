@@ -1,5 +1,9 @@
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, FlatList } from "react-native";
 import { GlobalStyles } from "@/src/theme/GlobalStyles";
+import { Colores } from '@/src/theme/Colores';
+import { Tamanos } from '@/src/theme/Tamanos';
+import { perros } from "@/data/perros.data";
+
 
 export default function Index() {
   return (
@@ -17,7 +21,43 @@ export default function Index() {
         <Text style={styles.cartelInfoTexto}>Si no puedes cuidarlo hoy, mañana y siempre; no lo adoptes.</Text>
         <Image style={[styles.cartelRefugio]} source={require('../../assets/images/cartelRefugio.png')}/>
       </View>
-      <Text>Refugio</Text>
+      <Text style={styles.textoCategorias}>Categorias</Text>
+      <Text style={styles.textoVerTodo}>Ver todo</Text>
+      <View style={styles.seccion}>
+        <View>
+          <View style={styles.seccionCuadro}>
+            <Image source={require('../../assets/images/gato.png')} style={GlobalStyles.imagenSeccion} />
+            <Text style={[styles.textoFiltroRefugio]}>Gatos</Text>
+          </View>
+        </View>
+        <View>
+          <View style={styles.seccionCuadro}>
+            <Image source={require('../../assets/images/perro.png')} style={GlobalStyles.imagenSeccion} />
+            <Text style={[styles.textoFiltroRefugio]}>Perros</Text>
+          </View>
+        </View>
+        <View>
+          <View style={styles.seccionCuadro}>
+            <Image source={require('../../assets/images/conejo.png')} style={GlobalStyles.imagenSeccion} />	
+            <Text style={[styles.textoFiltroRefugio]}>Conejos</Text>
+          </View>
+        </View>
+      </View>
+      <View style={[styles.seccionPerros]}>
+        <FlatList data={perros}
+          keyExtractor={(item) => item.id}
+          renderItem={({item}) => {
+            return (
+                <View style={styles.itemPerros}>
+                    <Text style={styles.nombrePerro}>{item.nombre}</Text>
+                    <Text style={styles.infoPerro}>{item.info}</Text>
+                    <Image source={item.foto} style={styles.imagenPerro}/>
+                </View>
+            );
+          }}>
+                
+        </FlatList>
+      </View>
     </View>
   );
 }
@@ -32,6 +72,8 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     width: "100%",
     height: "10%",
+    marginBottom: 10,
+    marginTop: 10,
   },
   buscador: {
     width: "75%",
@@ -88,4 +130,54 @@ const styles = StyleSheet.create({
     marginTop: 5,
     resizeMode: "contain",
   },
+  textoCategorias:{
+    color: "rgba(54, 98, 136, 0.84)",
+    fontSize: 19,
+    marginTop: 20,
+    marginLeft: 20,
+  },
+  textoVerTodo:{
+    color: "rgba(54, 98, 136, 0.84)",
+    fontSize: 19,
+    marginTop: -20,
+    marginLeft: "75%",
+    textDecorationLine: "underline",
+  },  
+  seccion: {
+    flexDirection: 'row',
+    justifyContent: "center", 
+    marginTop: "5%",   
+  },
+  textoFiltroRefugio: {
+    fontFamily: 'Roboto2',
+    fontSize: 14, 
+    color: '#000', 
+    fontWeight: 'bold',
+    textAlign: 'center', 
+  },
+  seccionCuadro: {
+    backgroundColor: "#FDB672",
+    borderRadius: 20,
+    height: 110, 
+    width: 110,  
+    alignItems: "center", 
+    justifyContent: "center",
+    marginHorizontal: 10,
+  },
+  seccionPerros: {
+
+  },
+  imagenPerro:{
+
+  },
+  itemPerros:{
+
+  },
+  nombrePerro:{
+
+  },
+  infoPerro:{
+
+  }
+
 });
