@@ -2,11 +2,46 @@ import { View, Text, Image, StyleSheet,Pressable } from 'react-native';
 import React from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import { perros } from '@/data/perros.data';
+import { useNavigation } from '@react-navigation/native';
+import { GlobalStyles } from '@/src/theme/GlobalStyles';
+import { Tamanos } from '@/src/theme/Tamanos';
+import { Colores } from '@/src/theme/Colores';
 
 const DetallePerros = () => {
   const { id } = useLocalSearchParams();
 
   const perro = perros.find((per) => per.id === id);
+
+
+  const navigation = useNavigation();
+
+  React.useLayoutEffect(() => {
+    if (perro) {
+      navigation.setOptions({
+        headerShown: true,
+        drawerInactiveTintColor: 'black',
+        drawerActiveBackgroundColor: 'rgba(54, 98, 136, 0.84)',
+        drawerActiveTintColor: 'white',
+        title: perro.nombre,
+        headerStyle: {
+          backgroundColor: Colores.stackBar,
+        },
+        headerTintColor: Colores.stackBarColorLetra,
+        headerTitleStyle: {
+          fontFamily: 'WendyOne',
+          fontSize: Tamanos.textoTitulo,
+        },
+        headerTitleAlign: 'center',
+        headerRight: () => (
+          <Image
+            source={require('../../assets/images/logoPetConnect.png')}
+            style={GlobalStyles.imagenStack}
+          />
+        ),
+      });
+    }
+  }, [navigation, perro]);
+
 
   if (!perro) {
     return (

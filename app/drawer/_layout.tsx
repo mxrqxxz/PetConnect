@@ -87,14 +87,22 @@ export default function DrawerLayout() {
         }}
       />
 
-      <Drawer.Screen
-        name="../../perros/[id]"
-        options={{
-          drawerLabel: 'Perro',
-          title: 'Perro',
-          drawerIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
-        }}
-      />
+<Drawer.Screen
+  name="../../perros/[id]"
+  options={{
+    drawerLabel: 'Perro',
+    title: 'Perro',
+    drawerIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
+    headerStyle: {
+      backgroundColor: 'rgba(0, 0, 0, 0.8)', // Ejemplo de color de fondo para esta pantalla
+    },
+    headerTintColor: 'white', // Cambia el color del texto
+    headerTitleStyle: {
+      fontSize: 24, // Cambia el tamaño del texto
+    },
+  }}
+/>
+
       
     </Drawer>
   );
