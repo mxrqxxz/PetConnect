@@ -22,9 +22,9 @@ const DetallePerros = () => {
         <Image source={perro.foto} style={styles.image} />
         <View style={styles.punto}/>
         <Text style={styles.name}>{perro.nombre}</Text>
-        <Image source={require("../../../assets/images/favorito.png")} style={styles.favorito}/>
+        <Image source={require("../../assets/images/favorito.png")} style={styles.favorito}/>
         <View style={styles.contenedorCiudad}>
-          <Image source={require("../../../assets/images/pin.png")} style={styles.pin} />
+          <Image source={require("../../assets/images/pin.png")} style={styles.pin} />
           <Text style={styles.ciudad}>{perro.ciudad}</Text>
         </View>
         <View style={styles.contenedorInfo}>
@@ -48,10 +48,10 @@ const DetallePerros = () => {
             <Text style={styles.nombreProtectora}>{perro.protectora}</Text>
           </View>
           <View style={styles.contenedorIcono}>
-            <Image source={require("../../../assets/images/phone.png")}/>
+            <Image source={require("../../assets/images/phone.png")}/>
           </View>
           <View style={styles.contenedorIcono}>
-            <Image source={require("../../../assets/images/mensaje.png")}/>
+            <Image source={require("../../assets/images/mensaje.png")}/>
           </View>
         </View>
         <Text style={styles.descripcion}>{perro.descripcion}</Text>
