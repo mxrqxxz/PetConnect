@@ -13,7 +13,7 @@ export const GlobalStyles = StyleSheet.create({
     imagenStack: {
         width: 40,
         height: 40,
-        marginLeft: 10,
+        marginRight: 15,
     },
     lista: {
         padding: 10,
