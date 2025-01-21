@@ -6,8 +6,9 @@ export const Tamanos = {
     textoMediano: 20,
     textoChico: 12,
     textoNotificacion: 18,
-    alturaFoto: 100,
-    anchoFoto: 103,
+    alturaFoto: 90,
+    anchoFoto: 90,
     alturaFotoSeccion: 50,
     anchoFotoSeccion: 50,
+    textoNotificaciones: 14,
 }as const;

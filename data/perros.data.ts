@@ -4,6 +4,15 @@ export const perros = [
       "nombre": "Pluto",
       "info": "Macho, 1,5 años",
       "foto": require('../assets/images/pluto.png'),
+      "ciudad": "Murcia",
+      "sexo": "Macho",
+      "edad": "1,5 años",
+      "Tipo": "Bodeguero",
+      "encargada": "Ana",
+      "protectora": "PerrosAbandona2",
+      "fotoEncargada": require('../assets/images/pluto.png'),
+      "descripcion": "Pluto entró de forma inesperada a una peluquería en la que justo estaba uno de nuestros voluntarios, no llevaba chip y nadie lo ha reclamado así que busca familia definitiva!"
+
     },
     {
       "id": "2",

@@ -32,7 +32,8 @@ export const GlobalStyles = StyleSheet.create({
     zonaPerfil:{
         flexDirection: 'row',
         gap: 15,
-        margin: 25
+        margin: 25,
+        marginTop: 15,
     },
     textoNormal: {
         fontFamily: 'Roboto2',
@@ -41,7 +42,7 @@ export const GlobalStyles = StyleSheet.create({
     },
     textoNegroNormal: {
         fontFamily: 'Roboto2',
-        fontSize: Tamanos.textoChico,
+        fontSize: Tamanos.textoNotificaciones,
         color: Colores.textoNegro,
     },
     textoNegroMediano: {
@@ -54,7 +55,12 @@ export const GlobalStyles = StyleSheet.create({
         fontSize: Tamanos.textoGrande,
         color: Colores.textoNormal,
         marginHorizontal: 25,
-        marginTop: 10,
+        marginTop: 5,
+        marginBottom: -10,
+    },
+    textoPerfil: {
+        color: Colores.textoBlanco,
+        fontSize: Tamanos.textoMediano,
     },
     textoNegrita: {
         fontWeight: 'bold',
@@ -71,6 +77,7 @@ export const GlobalStyles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         marginHorizontal: 25,
+        marginTop: -15,
     },
     notificacionCuadroTitulo:{
         flexDirection: 'row',
@@ -98,8 +105,8 @@ export const GlobalStyles = StyleSheet.create({
         paddingBottom: 15,
     },
     fotoNotificacion: {
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
     },
     enLinea: {
         flexDirection: 'row',
@@ -135,15 +142,16 @@ export const GlobalStyles = StyleSheet.create({
     imagenFooter: {
         width: Tamanos.anchoFoto,
         height: Tamanos.alturaFoto,
-        margin: 10,
+        margin: 0,
+        marginLeft: 20,
     },
     drawerUserContainer: {
-        backgroundColor: 'indigo',
+        backgroundColor: "#FDB672",
         justifyContent: 'center',
         alignItems: 'center',
         marginHorizontal: 0,
         marginBottom: 30,
-        height: 140,
+        height: 200,
         borderRadius: 10,
 
     },

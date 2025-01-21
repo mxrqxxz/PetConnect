@@ -8,8 +8,13 @@ const CustomDrawer = ( props: DrawerContentComponentProps) => {
     <DrawerContentScrollView {...props}>
       <View style={GlobalStyles.drawerUserContainer}>
         <Image style={GlobalStyles.drawerUserImg}
-                source={require('../assets/user.jpg')}
+                source={require('../../assets/images/fotoperfil.png')}
         />
+        <Text style={[GlobalStyles.textoNegrita, GlobalStyles.textoPerfil]}>Sonia Putellas</Text>
+        <Text
+            style={[GlobalStyles.textoNegrita, GlobalStyles.textoPerfil, GlobalStyles.textoSubrayado]}>
+            soniaputellas@gmail.com
+        </Text>
       </View>
 
       <DrawerItemList {...props}/>

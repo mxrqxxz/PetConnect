@@ -13,7 +13,7 @@ export const Notificaciones = () => {
                 <Image style={GlobalStyles.fotoNotificacion} source={require('../../assets/images/adoptMe.png')} />
                 <View style={[GlobalStyles.centradoVertical, GlobalStyles.enLinea]}>
                     <Text style={GlobalStyles.textoNegroNormal}>
-                        Nuevo mensaje de:{' '}
+                        Mensaje de:{' '}
                     </Text>
                     <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>
                         Protectora Perros Abandona2

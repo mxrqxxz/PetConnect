@@ -11,14 +11,13 @@ export default function Index() {
         initialRegion={{
           latitude: 37.6057928,
           longitude: -0.992766,
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421,
+          latitudeDelta: 0.21,
+          longitudeDelta: 0.21,
         }}
       >
-
         <Marker
           coordinate={{
-            latitude: 37.6057928,
+            latitude: 37.6057928, 
             longitude: -0.992766,
           }}
         />
@@ -32,7 +31,7 @@ export default function Index() {
         <View style={styles.buscadorPequeño}>
           <Image
             style={styles.iconoBuscador}
-            source={require("../../assets/images/iconoBuscador.png")}
+            source={require("../../../assets/images/iconoBuscador.png")}
           />
         </View>
       </View>
@@ -54,7 +53,6 @@ const styles = StyleSheet.create({
     marginTop: "-15%",
     width: "100%",   
     height: "70%",   
-    backgroundColor: 'red', 
   },
   containerMapa: {
     width: "100%",

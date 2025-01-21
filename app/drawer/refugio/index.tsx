@@ -1,6 +1,8 @@
+
 import React from "react";
 import { Text, View, StyleSheet, Image, FlatList } from "react-native";
 import { perros } from "@/data/perros.data";
+import { Link } from "expo-router";
 
 export default function Index() {
   return (
@@ -17,7 +19,7 @@ export default function Index() {
             <View style={styles.buscadorPequeño}>
               <Image
                 style={styles.iconoBuscador}
-                source={require("../../assets/images/iconoBuscador.png")}
+                source={require("../../../assets/images/iconoBuscador.png")}
               />
             </View>
           </View>
@@ -30,7 +32,7 @@ export default function Index() {
             </Text>
             <Image
               style={[styles.cartelRefugio]}
-              source={require("../../assets/images/cartelRefugio.png")}
+              source={require("../../../assets/images/cartelRefugio.png")}
             />
           </View>
           <Text style={styles.textoCategorias}>Categorias</Text>
@@ -39,7 +41,7 @@ export default function Index() {
             <View>
               <View style={styles.seccionCuadro}>
                 <Image
-                  source={require("../../assets/images/gato.png")}
+                  source={require("../../../assets/images/gato.png")}
                   style={styles.imagenSeccion}
                 />
                 <Text style={styles.textoFiltroRefugio}>Gatos</Text>
@@ -48,7 +50,7 @@ export default function Index() {
             <View>
               <View style={styles.seccionCuadro}>
                 <Image
-                  source={require("../../assets/images/perro.png")}
+                  source={require("../../../assets/images/perro.png")}
                   style={styles.imagenSeccion}
                 />
                 <Text style={styles.textoFiltroRefugio}>Perros</Text>
@@ -57,7 +59,7 @@ export default function Index() {
             <View>
               <View style={styles.seccionCuadro}>
                 <Image
-                  source={require("../../assets/images/conejo.png")}
+                  source={require("../../../assets/images/conejo.png")}
                   style={styles.imagenSeccion}
                 />
                 <Text style={styles.textoFiltroRefugio}>Conejos</Text>
@@ -69,9 +71,10 @@ export default function Index() {
       renderItem={({ item }) => (
         <View style={styles.itemPerros}>
           <Image source={item.foto} style={styles.imagenPerro} />
-          <Image source={require("../../assets/images/favorito.png")} style={styles.favorito}/>          
+          <Image source={require("../../../assets/images/favorito.png")} style={styles.favorito}/>          
           <Text style={styles.nombrePerro}>{item.nombre}</Text>
           <Text style={styles.infoPerro}>{item.info}</Text>
+          <Link style={styles.infoPerro} href={`./refugio/${item.id}`}>Ver detalle</Link>
         </View>
       )}
       contentContainerStyle={styles.seccionPerros}
