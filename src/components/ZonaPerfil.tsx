@@ -4,7 +4,7 @@ import { GlobalStyles } from '../theme/GlobalStyles'
 
 export const ZonaPerfil = () => {
     return (
-        <View style={GlobalStyles.zonaPerfl}>
+        <View style={GlobalStyles.zonaPerfil}>
             <Image source={require('../../assets/images/fotoperfil.png')} style={GlobalStyles.imagenPerfil} />
             <View style={GlobalStyles.centradoVertical}>
                 <Text style={[GlobalStyles.textoNegroMediano, GlobalStyles.textoNegrita]}>Sonia Putellas</Text>
