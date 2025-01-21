@@ -137,5 +137,21 @@ export const GlobalStyles = StyleSheet.create({
         height: Tamanos.alturaFoto,
         margin: 10,
     },
+    drawerUserContainer: {
+        backgroundColor: 'indigo',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginHorizontal: 0,
+        marginBottom: 30,
+        height: 140,
+        borderRadius: 10,
+
+    },
+    drawerUserImg: {
+        width: 100, 
+        height: 100, 
+        alignSelf:'center', 
+        borderRadius: 50
+    },
     
 });
