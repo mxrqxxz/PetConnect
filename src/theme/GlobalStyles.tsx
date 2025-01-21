@@ -70,7 +70,7 @@ export const GlobalStyles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     fotoNotificacionFlecha: {
-        width: 18,
+        width: 20,
         height: 11,
         marginRight: 20,
         marginTop: 5,
