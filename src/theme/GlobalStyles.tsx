@@ -6,6 +6,7 @@ export const GlobalStyles = StyleSheet.create({
     container: {
         backgroundColor: Colores.colorFondo,
         minHeight: '100%',
+        flex: 1,
         flexDirection: 'column',
         gap: 10,
     },
@@ -52,7 +53,8 @@ export const GlobalStyles = StyleSheet.create({
         fontFamily: 'WendyOne',
         fontSize: Tamanos.textoGrande,
         color: Colores.textoNormal,
-        margin: 25,
+        marginHorizontal: 25,
+        marginTop: 10,
     },
     textoNegrita: {
         fontWeight: 'bold',
@@ -105,7 +107,6 @@ export const GlobalStyles = StyleSheet.create({
     seccion: {
         flexDirection: 'row',
         marginHorizontal: 35,
-        borderWidth: 1,
         padding: 10,
         gap: 10,
         justifyContent: "center",  
@@ -119,10 +120,22 @@ export const GlobalStyles = StyleSheet.create({
         borderWidth: 1,
         marginBottom: 5,
     },
-
     imagenSeccion:{
         width: Tamanos.anchoFotoSeccion,
         height: Tamanos.alturaFotoSeccion,
-    }
+    },
+    footer: {
+        backgroundColor: Colores.stackBar,
+        padding: 20,
+        alignItems: 'center',
+    },
+    centrar: {
+        textAlign: 'center',
+    },
+    imagenFooter: {
+        width: Tamanos.anchoFoto,
+        height: Tamanos.alturaFoto,
+        margin: 10,
+    },
     
 });

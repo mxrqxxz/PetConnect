@@ -1,53 +1,26 @@
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, ScrollView } from "react-native";
 import { GlobalStyles } from "@/src/theme/GlobalStyles";
 import { ZonaPerfil } from "@/src/components/ZonaPerfil";
 import { Notificaciones } from "@/src/components/Notificaciones";
+import { Secciones } from "@/src/components/Secciones";
 
 export default function Index() {
   return (
-    <View style={GlobalStyles.container}>
-      <ZonaPerfil />
-      <Notificaciones />
-      <Text style={GlobalStyles.textoAzulGrande}>Secciones</Text>
+    <ScrollView>
+      <View style={GlobalStyles.container}>
+        <ZonaPerfil />
+        <Notificaciones />
+        <Text style={GlobalStyles.textoAzulGrande}>Secciones</Text>
+        <Secciones />
 
-      <View>
-        <View style={GlobalStyles.seccion}>
-          <View>
-            <View style={GlobalStyles.seccionCuadro}>
-              <Image source={require('../../assets/images/huella.png')} style={GlobalStyles.imagenSeccion} />
-            </View>
-            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Patitas al rescate</Text>
-          </View>
-          <View>
-            <View style={GlobalStyles.seccionCuadro}>
-              <Image source={require('../../assets/images/patasenmarcha.png')} style={GlobalStyles.imagenSeccion} />
-            </View>
-            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Patas en marcha</Text>
-          </View>
-          <View>
-            <View style={GlobalStyles.seccionCuadro}>
-              <Image source={require('../../assets/images/refugiodepatitas.png')} style={GlobalStyles.imagenSeccion} />	
-            </View>
-            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Refugio de patitas</Text>
-          </View>
-        </View>
-        <View style={GlobalStyles.seccion}>
-          <View>
-            <View style={GlobalStyles.seccionCuadro}>
-              <Image source={require('../../assets/images/comunidadanimal.png')} style={GlobalStyles.imagenSeccion} />
-            </View>
-            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Comunidad animal</Text>
-          </View>
-          <View>
-            <View style={GlobalStyles.seccionCuadro}>
-              <Image source={require('../../assets/images/sobre.png')} style={GlobalStyles.imagenSeccion} />	
-            </View>
-            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Sobre Petconnect</Text>
+        <View style={GlobalStyles.footer}>
+          <Text style={[GlobalStyles.textoNotificacionesTitulo, GlobalStyles.centrar]}>Protectoras en colaboración</Text>
+          <View style={GlobalStyles.enLinea}>
+            <Image source={require('@/assets/images/protectora1.png')} style={GlobalStyles.imagenFooter} />
+            <Image source={require('@/assets/images/protectora2.png')} style={GlobalStyles.imagenFooter} />
           </View>
         </View>
       </View>
-
-    </View>
-
+    </ScrollView>
   );
 }
