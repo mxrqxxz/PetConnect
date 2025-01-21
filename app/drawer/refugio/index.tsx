@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { Text, View, StyleSheet, Image, FlatList } from "react-native";
 import { perros } from "@/data/perros.data";
