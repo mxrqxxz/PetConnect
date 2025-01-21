@@ -12,16 +12,38 @@ export default function Index() {
 
       <View>
         <View style={GlobalStyles.seccion}>
-          <View style={GlobalStyles.seccionCuadro}>
-            <Image source={require('../../assets/images/huella.png')} style={GlobalStyles.imagenSeccion} />
+          <View>
+            <View style={GlobalStyles.seccionCuadro}>
+              <Image source={require('../../assets/images/huella.png')} style={GlobalStyles.imagenSeccion} />
+            </View>
+            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Patitas al rescate</Text>
           </View>
-          <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Patitas al rescate</Text>
+          <View>
+            <View style={GlobalStyles.seccionCuadro}>
+              <Image source={require('../../assets/images/patasenmarcha.png')} style={GlobalStyles.imagenSeccion} />
+            </View>
+            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Patas en marcha</Text>
+          </View>
+          <View>
+            <View style={GlobalStyles.seccionCuadro}>
+              <Image source={require('../../assets/images/refugiodepatitas.png')} style={GlobalStyles.imagenSeccion} />	
+            </View>
+            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Refugio de patitas</Text>
+          </View>
         </View>
         <View style={GlobalStyles.seccion}>
-          <View style={GlobalStyles.seccionCuadro}>
-            <Image source={require('../../assets/images/huella.png')} style={GlobalStyles.imagenSeccion} />
+          <View>
+            <View style={GlobalStyles.seccionCuadro}>
+              <Image source={require('../../assets/images/comunidadanimal.png')} style={GlobalStyles.imagenSeccion} />
+            </View>
+            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Comunidad animal</Text>
           </View>
-          <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Patitas al rescate</Text>
+          <View>
+            <View style={GlobalStyles.seccionCuadro}>
+              <Image source={require('../../assets/images/sobre.png')} style={GlobalStyles.imagenSeccion} />	
+            </View>
+            <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>Sobre Petconnect</Text>
+          </View>
         </View>
       </View>
 

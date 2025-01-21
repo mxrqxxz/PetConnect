@@ -6,7 +6,6 @@ export const GlobalStyles = StyleSheet.create({
     container: {
         backgroundColor: Colores.colorFondo,
         minHeight: '100%',
-        flex: 1,
         flexDirection: 'column',
         gap: 10,
     },
@@ -103,18 +102,24 @@ export const GlobalStyles = StyleSheet.create({
     enLinea: {
         flexDirection: 'row',
     },
-    seccion:{
+    seccion: {
+        flexDirection: 'row',
         marginHorizontal: 35,
         borderWidth: 1,
+        padding: 10,
+        gap: 10,
+        justifyContent: "center",  
+        alignItems: "center",      
     },
     seccionCuadro: {
         backgroundColor: Colores.stackBar,
         padding: 15,
-        alignSelf: "flex-start",
+        alignSelf: "center",       
         borderRadius: 20,
         borderWidth: 1,
         marginBottom: 5,
     },
+
     imagenSeccion:{
         width: Tamanos.anchoFotoSeccion,
         height: Tamanos.alturaFotoSeccion,

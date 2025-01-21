@@ -3,7 +3,7 @@ import { GlobalStyles } from "@/src/theme/GlobalStyles";
 
 export default function Index() {
   return (
-    <View style={GlobalStyles.container}>
+    <View style={styles.containerRefugio}>
       <View style={styles.zonaBuscador}>
         <View style={styles.buscador}>
           <Text style={styles.textoBuscador}>Buscar...</Text>
@@ -13,9 +13,9 @@ export default function Index() {
         </View>
       </View>
       <View style={styles.cartelInfo}>
-        <Text style={styles.cartelInfoTitulo}>Buscar...</Text>
-        <Text style={styles.cartelInfoTexto}>Buscar...</Text>
-        <Image style={[styles.buscadorPequeño, GlobalStyles.imagenStack]} source={require('../../assets/images/iconoBuscador.png')}/>
+        <Text style={styles.cartelInfoTitulo}>Adoptar es un compromiso para toda la vida, piénsalo bien antes de dar el paso.</Text>
+        <Text style={styles.cartelInfoTexto}>Si no puedes cuidarlo hoy, mañana y siempre; no lo adoptes.</Text>
+        <Image style={[styles.cartelRefugio]} source={require('../../assets/images/cartelRefugio.png')}/>
       </View>
       <Text>Refugio</Text>
     </View>
@@ -23,8 +23,12 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
+  containerRefugio:{
+    minHeight: '100%',
+    minWidth: '100%',
+    backgroundColor: "white",
+  },
   zonaBuscador: {
-    flex: 1,
     flexDirection: "row",
     width: "100%",
     height: "10%",
@@ -59,12 +63,29 @@ const styles = StyleSheet.create({
     margin: "auto",
   },
   cartelInfo: {
-
+    marginLeft: 20,
+    width: "90%",
+    height: "21%",
+    backgroundColor: "rgba(54, 98, 136, 0.84)",
+    borderRadius: 10,
   },
   cartelInfoTitulo:{
-
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
+    marginTop: 10,
+    marginLeft: 10,
   },
   cartelInfoTexto:{
-
+    color: "white",
+    fontSize: 17,
+    marginTop: 10,
+    marginLeft: 10,
+  },
+  cartelRefugio:{
+    width: "100%",
+    height: "30%",
+    marginTop: 5,
+    resizeMode: "contain",
   },
 });
