@@ -86,14 +86,7 @@ export default function DrawerLayout() {
           drawerIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
         }}
       />
-      <Drawer.Screen
-        name="perros/index"
-        options={{
-          drawerLabel: 'Perros',
-          title: 'PERROS',
-          drawerIcon: ({ size, color }) => <Ionicons name="information-circle" size={size} color={color} />,
-        }}
-      />
+      
     </Drawer>
   );
 }

@@ -27,7 +27,7 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Stack
         screenOptions={{
-          headerShown: false, // Oculta el header principal
+          headerShown: false, 
         }}
       />
     </GestureHandlerRootView>
