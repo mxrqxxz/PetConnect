@@ -29,7 +29,7 @@ export const GlobalStyles = StyleSheet.create({
         height: Tamanos.alturaFoto,
         borderRadius: 10,
     },
-    zonaPerfl:{
+    zonaPerfil:{
         flexDirection: 'row',
         gap: 15,
         margin: 25
@@ -37,7 +37,7 @@ export const GlobalStyles = StyleSheet.create({
     textoNormal: {
         fontFamily: 'Roboto2',
         fontSize: Tamanos.textoChico,
-        color: Colores.colorTextoNormal,
+        color: Colores.textoNormal,
     },
     textoNegroNormal: {
         fontFamily: 'Roboto2',
@@ -48,6 +48,12 @@ export const GlobalStyles = StyleSheet.create({
         fontFamily: 'Roboto2',
         fontSize: Tamanos.textoMediano,
         color: Colores.textoNegro,
+    },
+    textoAzulGrande: {
+        fontFamily: 'WendyOne',
+        fontSize: Tamanos.textoGrande,
+        color: Colores.textoNormal,
+        margin: 25,
     },
     textoNegrita: {
         fontWeight: 'bold',
@@ -96,6 +102,22 @@ export const GlobalStyles = StyleSheet.create({
     },
     enLinea: {
         flexDirection: 'row',
+    },
+    seccion:{
+        marginHorizontal: 35,
+        borderWidth: 1,
+    },
+    seccionCuadro: {
+        backgroundColor: Colores.stackBar,
+        padding: 15,
+        alignSelf: "flex-start",
+        borderRadius: 20,
+        borderWidth: 1,
+        marginBottom: 5,
+    },
+    imagenSeccion:{
+        width: Tamanos.anchoFotoSeccion,
+        height: Tamanos.alturaFotoSeccion,
     }
     
 });
