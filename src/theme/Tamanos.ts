@@ -1,6 +1,7 @@
 export const Tamanos = {
     weightMediano: 300,
     weightGrande: 400,
+    textoTituloApp: 45,
     textoTitulo: 35,
     textoGrande: 30,
     textoMediano: 20,

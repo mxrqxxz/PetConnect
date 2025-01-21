@@ -18,4 +18,6 @@ export const Colores = {
     textoBlanco: 'white',
     naranja: "#FDB672",
     azulOscuro: '#194A6E',
+    azulLogin: '#547999',
+    blanco: '#F9F9F9',
 }as const;

@@ -1,7 +1,15 @@
 import { Text, View, StyleSheet, Image, Pressable } from "react-native";
 import { GlobalStyles } from "@/src/theme/GlobalStyles";
+import { useRouter } from "expo-router";
 
 export default function Index() {
+
+    const router = useRouter();
+  
+    const redirigirLogin = () => {
+      router.push('/');
+    }
+
   return (
     <View style={styles.container}>
       <Image source={require("@/assets/images/logoPetConnect.png")} style={styles.logo} />
@@ -28,12 +36,12 @@ export default function Index() {
           <Text style={styles.textoCuadro}>Repetir contraseña</Text>
         </View>
         <Pressable style={styles.botonRegistro}>
-          <Text style={styles.textoBotonRegistro}>Registrate</Text>
+          <Text style={styles.textoBotonRegistro} onPress={redirigirLogin}>Registrate</Text>
         </Pressable>
       </View>
       <View style={styles.login}>
         <Text style={styles.pregunta}>Tienes ya una cuenta?</Text>
-        <Text style={styles.acceder}>Accede al refugio</Text>
+        <Text style={styles.acceder} onPress={redirigirLogin}>Accede al refugio</Text>
       </View>
     </View>
   );
