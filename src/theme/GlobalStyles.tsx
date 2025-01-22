@@ -476,15 +476,10 @@ export const GlobalStyles = StyleSheet.create({
         resizeMode: "contain",
         marginBottom: 5,
     },
-    
     favorito:{
         width: 25,
         height: 25,
-        position: "absolute",
-        right: "10%",
-        top: "42%",
     },
-    //
     mapa: {
         marginTop: "-15%",
         width: "100%",   
@@ -576,12 +571,14 @@ export const GlobalStyles = StyleSheet.create({
         color: Colores.blanco,
         fontSize: Tamanos.textoMediano, 
     },
-    favoritoPerro:{
-        width: 40,
-        height: 40,
+    botonFavoritoPerro:{
         position: "absolute",
+        top: "43%",
         right: "10%",
-        top: "42%",
+    },
+    favoritoPerro:{
+        width: 35,
+        height: 35,
     },
     contenedorIcono:{
         backgroundColor: Colores.naranja,

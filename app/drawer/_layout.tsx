@@ -53,9 +53,9 @@ export default function DrawerLayout() {
         headerTitleAlign: 'center',
         headerRight: () => (
           <Pressable onPress={redirigirInicio}>
-          <Image
-          source={require('../../assets/images/logoPetConnect.png')}
-          style={GlobalStyles.imagenLogin}/>
+            <Image
+              source={require('../../assets/images/logoPetConnect.png')}
+              style={GlobalStyles.imagenLogin} />
           </Pressable>
         ),
       }}
@@ -69,47 +69,63 @@ export default function DrawerLayout() {
         }}
       />
       <Drawer.Screen
-        name="comunidad/index"
+        name="rescate/index"
         options={{
-          drawerLabel: 'Comunidad',
-          title: 'COMUNIDAD',
-          drawerIcon: ({ size, color }) => <Ionicons name="chatbox-ellipses" size={size} color={color} />,
+          drawerLabel: 'Patitas al rescate',
+          title: 'RESCATE',
+          drawerIcon: ({ size, color }) => <Ionicons name="compass" size={size} color={color} />,
+        }}
+      />
+      <Drawer.Screen
+        name="marcha/index"
+        options={{
+          drawerLabel: 'Patas en marcha',
+          title: 'PATAS EN MARCHA',
+          drawerIcon: ({ size, color }) => <Ionicons name="paw" size={size} color={color} />,
         }}
       />
       <Drawer.Screen
         name="refugio/index"
         options={{
-          drawerLabel: 'Refugio',
+          drawerLabel: 'Refugio de patitas',
           title: 'REFUGIO',
-          drawerIcon: ({ size, color }) => <Ionicons name="paw" size={size} color={color} />,
+          drawerIcon: ({ size, color }) => <Ionicons name="medkit" size={size} color={color} />,
         }}
       />
       <Drawer.Screen
-        name="rescate/index"
+        name="comunidad/index"
         options={{
-          drawerLabel: 'Rescate',
-          title: 'RESCATE',
+          drawerLabel: 'Comunidad animal',
+          title: 'COMUNIDAD',
+          drawerIcon: ({ size, color }) => <Ionicons name="chatbox-ellipses" size={size} color={color} />,
+        }}
+      />
+      <Drawer.Screen
+        name="nosotros/index"
+        options={{
+          drawerLabel: 'Sobre Petconnect',
+          title: 'SOBRE NOSOTROS',
           drawerIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
         }}
       />
 
-<Drawer.Screen
-  name="../../perros/[id]"
-  options={{
-    drawerLabel: 'Perro',
-    title: 'Perro',
-    drawerIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
-    headerStyle: {
-      backgroundColor: 'rgba(0, 0, 0, 0.8)', // Ejemplo de color de fondo para esta pantalla
-    },
-    headerTintColor: 'white', // Cambia el color del texto
-    headerTitleStyle: {
-      fontSize: 24, // Cambia el tamaño del texto
-    },
-  }}
-/>
+      <Drawer.Screen
+        name="../../perros/[id]"
+        options={{
+          drawerLabel: 'Perro',
+          title: 'Perro',
+          drawerIcon: ({ size, color }) => <Ionicons name="search" size={size} color={color} />,
+          headerStyle: {
+            backgroundColor: 'rgba(0, 0, 0, 0.8)', // Ejemplo de color de fondo para esta pantalla
+          },
+          headerTintColor: 'white', // Cambia el color del texto
+          headerTitleStyle: {
+            fontSize: 24, // Cambia el tamaño del texto
+          },
+        }}
+      />
 
-      
+
     </Drawer>
   );
 }

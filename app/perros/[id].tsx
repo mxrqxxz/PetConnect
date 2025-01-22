@@ -1,5 +1,5 @@
-import { View, Text, Image, StyleSheet,Pressable } from 'react-native';
-import React from 'react';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import React, { useState } from 'react';
 import { useLocalSearchParams } from 'expo-router';
 import { perros } from '@/data/perros.data';
 import { useNavigation } from '@react-navigation/native';
@@ -18,6 +18,12 @@ const DetallePerros = () => {
   const { id } = useLocalSearchParams();
 
   const perro = perros.find((per) => per.id === id);
+
+  const [favorito, setFavorito] = useState(perro?.favorito);
+
+  const cambiarFavorito = () => {
+    setFavorito(!favorito);
+  }
 
   const mostrarCustomToast = () => {
     Toast.show({
@@ -80,9 +86,11 @@ const DetallePerros = () => {
     <View style={GlobalStyles.containerPerro}>
       <View style={GlobalStyles.tarjeta}>
         <Image source={perro.foto} style={GlobalStyles.image} />
-        <View style={GlobalStyles.punto}/>
+        <View style={GlobalStyles.punto} />
         <Text style={GlobalStyles.name}>{perro.nombre}</Text>
-        <Image source={require("../../assets/images/favorito.png")} style={GlobalStyles.favoritoPerro}/>
+        <Pressable onPress={cambiarFavorito} style={GlobalStyles.botonFavoritoPerro}>
+          <Image source={favorito ? require("@/assets/images/favActivo.png") : require("@/assets/images/favorito.png")} style={GlobalStyles.favoritoPerro} />
+        </Pressable>
         <View style={GlobalStyles.contenedorCiudad}>
           <Image source={require("../../assets/images/pin.png")} style={GlobalStyles.pin} />
           <Text style={[GlobalStyles.ciudad, GlobalStyles.azulTextoMediano]}>{perro.ciudad}</Text>
@@ -108,20 +116,20 @@ const DetallePerros = () => {
             <Text style={GlobalStyles.nombreProtectora}>{perro.protectora}</Text>
           </View>
           <View style={GlobalStyles.contenedorIcono}>
-            <Image source={require("../../assets/images/phone.png")}/>
+            <Image source={require("../../assets/images/phone.png")} />
           </View>
           <View style={GlobalStyles.contenedorIcono}>
-            <Image source={require("../../assets/images/mensaje.png")}/>
+            <Image source={require("../../assets/images/mensaje.png")} />
           </View>
         </View>
         <Text style={GlobalStyles.descripcion}>{perro.descripcion}</Text>
       </View>
-      <Boton 
-          onPress={mostrarCustomToast} 
-          style={GlobalStyles.botonPerro}
-          textStyle={GlobalStyles.textoBotonPerro}
+      <Boton
+        onPress={mostrarCustomToast}
+        style={GlobalStyles.botonPerro}
+        textStyle={GlobalStyles.textoBotonPerro}
       >
-          DAME UN HOGAR
+        DAME UN HOGAR
       </Boton>
       <Toast config={toastConfig} />
     </View>

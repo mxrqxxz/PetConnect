@@ -1,15 +1,43 @@
 
-import React from "react";
-import { Text, View, Image, FlatList } from "react-native";
+import React, { useEffect, useState } from "react";
+import { Text, View, Image, FlatList, TouchableOpacity } from "react-native";
 import { perros } from "@/data/perros.data";
 import { Link } from "expo-router";
 import { GlobalStyles } from "@/src/theme/GlobalStyles";
 import { Buscador } from "@/src/components/Buscador";
 
 export default function Index() {
+
+  interface Perro {
+    id: string;
+    nombre: string;
+    info: string;
+    foto: any;
+    ciudad: string;
+    sexo: string;
+    edad: string;
+    Tipo: string;
+    encargada: string;
+    protectora: string;
+    fotoEncargada: any;
+    descripcion: string;
+    favorito: boolean;
+  }
+  // Estado para manejar la lista de perros
+  const [perrosLista, setPerrosLista] = useState<Perro[]>(perros);
+
+  // Función para manejar el toggle del favorito
+  const toggleFavorito = (id: string) => {
+    setPerrosLista((prevPerros) =>
+      prevPerros.map((perro) =>
+        perro.id === id ? { ...perro, favorito: !perro.favorito } : perro
+      )
+    );
+  };
+
   return (
     <FlatList
-      data={perros}
+      data={perrosLista}
       keyExtractor={(item) => item.id}
       numColumns={2}
       ListHeaderComponent={
@@ -22,8 +50,8 @@ export default function Index() {
             azulTextoMediano={GlobalStyles.azulTextoMediano}
             buscadorPequeñoRescate={GlobalStyles.buscadorPequeño}
             iconoBuscadorRescate={GlobalStyles.iconoBuscador}
-            />
-          
+          />
+
           <View style={[GlobalStyles.cartelInfo, GlobalStyles.marginLeft20]}>
             <Text style={GlobalStyles.cartelInfoTitulo}>
               Adoptar es un compromiso para toda la vida, piénsalo bien antes de dar el paso.
@@ -68,11 +96,14 @@ export default function Index() {
             </View>
           </View>
         </View>
+
       }
       renderItem={({ item }) => (
         <View style={GlobalStyles.itemPerros}>
           <Image source={item.foto} style={GlobalStyles.imagenPerro} />
-          <Image source={require("../../../assets/images/favorito.png")} style={GlobalStyles.favorito}/>          
+          <TouchableOpacity style={GlobalStyles.botonFavoritoPerro} onPress={() => toggleFavorito(item.id)}>
+            <Image source={item.favorito ? require("../../../assets/images/favActivo.png") : require("../../../assets/images/favorito.png")} style={GlobalStyles.favorito} />
+          </TouchableOpacity>
           <Text style={GlobalStyles.nombrePerro}>{item.nombre}</Text>
           <Text style={GlobalStyles.infoPerro}>{item.info}</Text>
           <Link style={[GlobalStyles.infoPerro, GlobalStyles.detallesPerro]} href={`../../perros/${item.id}`}>Ver detalle</Link>

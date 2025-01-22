@@ -11,7 +11,8 @@ export const perros = [
     "encargada": "Sara",
     "protectora": "PerrosAbandona2",
     "fotoEncargada": require('../assets/images/ana.png'),
-    "descripcion": "Pluto entró de forma inesperada a una peluquería en la que justo estaba uno de nuestros voluntarios, no llevaba chip y nadie lo ha reclamado así que busca familia definitiva!"
+    "descripcion": "Pluto entró de forma inesperada a una peluquería en la que justo estaba uno de nuestros voluntarios, no llevaba chip y nadie lo ha reclamado así que busca familia definitiva!",
+    "favorito": true
   },
   {
     "id": "2",
@@ -25,7 +26,8 @@ export const perros = [
     "encargada": "Sara",
     "protectora": "PerrosAbandona2",
     "fotoEncargada": require('../assets/images/ana.png'),
-    "descripcion": "Afro y Shaggy fueron encontrados juntos en una calle. Son inseparables, juguetones y llenos de energía. Buscan un hogar donde puedan crecer juntos y recibir mucho cariño."
+    "descripcion": "Afro y Shaggy fueron encontrados juntos en una calle. Son inseparables, juguetones y llenos de energía. Buscan un hogar donde puedan crecer juntos y recibir mucho cariño.",
+    "favorito": false
   },
   {
     "id": "3",
@@ -39,7 +41,8 @@ export const perros = [
     "encargada": "Sara",
     "protectora": "PerrosAbandona2",
     "fotoEncargada": require('../assets/images/ana.png'),
-    "descripcion": "Merlín fue rescatado de la calle. Es un perro muy cariñoso y obediente. Necesita una familia que le proporcione ejercicio diario y mucha atención."
+    "descripcion": "Merlín fue rescatado de la calle. Es un perro muy cariñoso y obediente. Necesita una familia que le proporcione ejercicio diario y mucha atención.",
+    "favorito": false
   },
   {
     "id": "4",
@@ -53,6 +56,7 @@ export const perros = [
     "encargada": "Sara",
     "protectora": "PerrosAbandona2",
     "fotoEncargada": require('../assets/images/ana.png'),
-    "descripcion": "Pepito fue encontrado en un parque. Es muy tranquilo y le encanta estar acompañado. Busca una familia que lo quiera como parte de su hogar."
+    "descripcion": "Pepito fue encontrado en un parque. Es muy tranquilo y le encanta estar acompañado. Busca una familia que lo quiera como parte de su hogar.",
+    "favorito": true
   }
 ]
