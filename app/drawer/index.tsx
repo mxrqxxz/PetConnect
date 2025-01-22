@@ -16,8 +16,8 @@ export default function Index() {
         <View style={GlobalStyles.footer}>
           <Text style={[GlobalStyles.textoNotificacionesTitulo, GlobalStyles.centrar]}>Protectoras en colaboración</Text>
           <View style={GlobalStyles.enLinea}>
-            <Image source={require('@/assets/images/protectora1.png')} style={GlobalStyles.imagenFooter} />
-            <Image source={require('@/assets/images/protectora2.png')} style={GlobalStyles.imagenFooter} />
+            <Image source={require('@/assets/images/protectora1.png')} style={[GlobalStyles.imagenFooter, GlobalStyles.marginLeft20]} />
+            <Image source={require('@/assets/images/protectora2.png')} style={[GlobalStyles.imagenFooter, GlobalStyles.marginLeft20]} />
           </View>
         </View>
       </View>

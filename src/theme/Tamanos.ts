@@ -12,4 +12,12 @@ export const Tamanos = {
     alturaFotoSeccion: 50,
     anchoFotoSeccion: 50,
     textoNotificaciones: 14,
+    textoCartel: 16,
+    tituloTemas: 25,
+    tituloPost: 19,
+    cartelInfoTexto: 17,
+    espacioSituacionTexto: 15,
+    name: 25,
+    titulo: 40,
+    slogan: 27,
 }as const;

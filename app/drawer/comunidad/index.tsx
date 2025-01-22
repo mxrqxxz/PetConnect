@@ -1,123 +1,71 @@
 import { posts } from "@/data/posts.data";
-import { FlatList, Text, View, StyleSheet, Image, Pressable } from "react-native";
+import { FlatList, Text, View, Image, Pressable } from "react-native";
 import { GlobalStyles } from "@/src/theme/GlobalStyles";
+import { Boton } from "@/src/components/Boton";
+import Toast from 'react-native-toast-message';
+import React from "react";
+
+interface CustomToastProps {
+  title: string;
+  message: string;
+}
 
 export default function Index() {
+
+  const mostrarCustomToast = () => {
+    Toast.show({
+      type: "customToast",
+      props: {
+        title: "¡Nuevo post!",
+        message: "Para enviar un post, revisa tu correo.",
+      },
+    });
+  };
+
+  const toastConfig = {
+    customToast: ({ props }: { props: CustomToastProps }) => (
+      <View style={GlobalStyles.customToastContainer}>
+        <Text style={GlobalStyles.toastTitle}>{props.title}</Text>
+        <Text style={GlobalStyles.toastMessage}>{props.message}</Text>
+      </View>
+    ),
+  };
+
   return (
-    <View style={styles.containerComunidad}>
-      <View style={styles.cartel}>
-        <Image source={require('../../../assets/images/iconoCartel.png')} style={styles.iconoCartel} />
-        <Text style={styles.tituloCartel}>PATITAS EN MARCHA (eventos)</Text>
-        <Text style={styles.textoCartel}>
+    <View style={GlobalStyles.containerComunidad}>
+      
+      <View style={GlobalStyles.cartel}>
+        <Image source={require('../../../assets/images/iconoCartel.png')} style={GlobalStyles.iconoCartel} />
+        <Text style={GlobalStyles.tituloCartel}>PATITAS EN MARCHA (eventos)</Text>
+        <Text style={GlobalStyles.textoCartel}>
           Descubre eventos solidarios creados por la comunidad: actividades deportivas, caminatas y mucho más. 🐾 Cada participación suma para ayudar a los animales que más lo necesitan. ¡Únete y sé parte del cambio!
         </Text>
       </View>
-      <Text style={styles.tituloTemas}>Temas de discusión</Text>
+      <Text style={[GlobalStyles.textoAzulGrande, GlobalStyles.marginLeft20]}>Temas de discusión</Text>
 
       <FlatList
         data={posts}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => {
           return (
-            <View style={styles.itemPosts}>
-              <Text style={styles.tituloPost}>{item.titulo}</Text>
-              <Text style={styles.comentarioPeli}>{item.comentarios}</Text>
-              <Image source={require('../../../assets/images/bocadillo.png')} style={styles.bocadillo} />
+            <View style={GlobalStyles.itemPosts}>
+              <Text style={GlobalStyles.tituloPost}>{item.titulo}</Text>
+              <Text style={GlobalStyles.comentarioPeli}>{item.comentarios}</Text>
+              <Image source={require('../../../assets/images/bocadillo.png')} style={GlobalStyles.bocadillo} />
             </View>
           );
         }}
-        contentContainerStyle={styles.flatListContent} 
+        contentContainerStyle={GlobalStyles.flatListContent} 
       />
 
-      <Pressable style={styles.botonComunidad}>
-        <Text style={styles.textoBotonComunidad}>Nuevo</Text>
-      </Pressable>
+      <Boton 
+          onPress={mostrarCustomToast}
+          style={GlobalStyles.botonComunidad}
+          textStyle={GlobalStyles.textoBotonComunidad}
+      >
+          Nuevo
+      </Boton>
+      <Toast config={toastConfig} />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  containerComunidad: {
-    flex: 1, 
-    backgroundColor: "white",
-  },
-  iconoCartel: {
-    width: 40,
-    height: 40,
-  },
-  tituloCartel: {
-    color: "#194A6E",
-    fontSize: 18,
-    fontWeight: "bold",
-    marginTop: -35,
-    marginLeft: 50,
-  },
-  textoCartel: {
-    fontSize: 16,
-    marginTop: 15,
-    marginBottom: 0,
-  },
-  cartel: {
-    width: "90%",
-    backgroundColor: "#FDB672",
-    padding: 20,
-    marginLeft: "5%",
-    marginTop: 20,
-    borderRadius: 10,
-    marginBottom: 20,
-  },
-  tituloTemas: {
-    color: "#194A6E",
-    fontSize: 25,
-    fontWeight: "bold",
-    marginLeft: 20,
-    marginBottom: 10,
-  },
-  flatListContent: {
-    paddingBottom: 80, // Deja espacio para el botón
-  },
-  itemPosts: {
-    width: "90%",
-    backgroundColor: "#A6C6D7",
-    height: 90,
-    flex: 1,
-    padding: 15,
-    marginLeft: "5%",
-    marginTop: 15,
-    borderRadius: 10,
-  },
-  tituloPost: {
-    fontSize: 19,
-    fontWeight: "bold",
-    marginBottom: 10,
-    color: "#194A6E",
-  },
-  comentarioPeli: {
-    fontSize: 19,
-    marginRight: 10,
-    marginTop: -20,
-    textAlign: "right",
-  },
-  bocadillo: {
-    width: 27,
-    height: 27,
-    position: "absolute",
-    right: 52,
-    bottom: 10,
-  },
-  botonComunidad: {
-    width: "30%",
-    height: 50,
-    borderRadius: 25,
-    backgroundColor: "rgba(54, 98, 136, 0.84)",
-    alignSelf: "center",
-    justifyContent: "center",
-    position: "absolute",
-    bottom: 20, 
-  },
-  textoBotonComunidad: {
-    textAlign: "center",
-    color: "white",
-    fontSize: 20,
-  },
-});

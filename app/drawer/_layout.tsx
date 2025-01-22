@@ -49,7 +49,7 @@ export default function DrawerLayout() {
         headerRight: () => (
           <Image
             source={require('../../assets/images/logoPetConnect.png')}
-            style={GlobalStyles.imagenStack}
+            style={GlobalStyles.imagenLogin}
           />
         ),
       }}

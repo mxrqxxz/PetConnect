@@ -10,7 +10,7 @@ export const Colores = {
     notaBuena: '#00FF00',
     notaMedia: '#FFFF00',
     notaMala: '#FF0000',
-
+    itemPost: '#A6C6D7',
     stackBar: '#366288',
     stackBarColorLetra: 'white',
     textoNormal: '#194A6E',
@@ -20,4 +20,7 @@ export const Colores = {
     azulOscuro: '#194A6E',
     azulLogin: '#547999',
     blanco: '#F9F9F9',
+    azulRgba: 'rgba(54, 98, 136, 0.84)',
+    gray: 'gray',
+    red: 'red',
 }as const;
