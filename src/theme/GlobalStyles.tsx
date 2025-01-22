@@ -71,7 +71,7 @@ export const GlobalStyles = StyleSheet.create({
         textAlign: 'center',
     },
     textoPerfil: {
-        color: Colores.textoBlanco,
+        color: Colores.blanco,
         fontSize: Tamanos.textoMediano,
     },
     textoNegrita: {
@@ -158,7 +158,7 @@ export const GlobalStyles = StyleSheet.create({
         margin: 0,
     },
     drawerUserContainer: {
-        backgroundColor: "#FDB672",
+        backgroundColor: Colores.azulRgba,
         justifyContent: 'center',
         alignItems: 'center',
         marginHorizontal: 0,
@@ -171,7 +171,9 @@ export const GlobalStyles = StyleSheet.create({
         width: 100,
         height: 100,
         alignSelf: 'center',
-        borderRadius: 50
+        borderRadius: 50,
+        marginBottom: 10,
+        marginTop: 10,
     },
     cabezeraLoginRegistro: {
         alignItems: 'flex-end',
