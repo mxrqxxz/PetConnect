@@ -465,6 +465,9 @@ export const GlobalStyles = StyleSheet.create({
         fontSize: Tamanos.textoNotificaciones,
         marginBottom: 10,
     },
+    detallesPerro:{
+        textDecorationLine: "underline",
+    },
     imagenSeccionRefugio: {
         width: 60, 
         height: 60,

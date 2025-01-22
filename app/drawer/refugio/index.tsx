@@ -75,7 +75,7 @@ export default function Index() {
           <Image source={require("../../../assets/images/favorito.png")} style={GlobalStyles.favorito}/>          
           <Text style={GlobalStyles.nombrePerro}>{item.nombre}</Text>
           <Text style={GlobalStyles.infoPerro}>{item.info}</Text>
-          <Link style={GlobalStyles.infoPerro} href={`../../perros/${item.id}`}>Ver detalle</Link>
+          <Link style={[GlobalStyles.infoPerro, GlobalStyles.detallesPerro]} href={`../../perros/${item.id}`}>Ver detalle</Link>
         </View>
       )}
       contentContainerStyle={GlobalStyles.seccionPerros}

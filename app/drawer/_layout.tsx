@@ -4,10 +4,11 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { Drawer } from 'expo-router/drawer';
 import { Ionicons } from '@expo/vector-icons';
-import { Image } from 'react-native';
+import { Image, Pressable } from 'react-native';
 import CustomDrawer from '@/src/components/CustomDrawer';
 import { GlobalStyles } from '@/src/theme/GlobalStyles';
 import { Tamanos } from '@/src/theme/Tamanos';
+import { router } from 'expo-router';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -18,6 +19,10 @@ export default function DrawerLayout() {
     Roboto: require('../../assets/fonts/Roboto.ttf'),
     Roboto2: require('../../assets/fonts/Roboto2.ttf'),
   });
+
+  const redirigirInicio = () => {
+    router.push('/drawer');
+  }
 
   useEffect(() => {
     if (loaded) {
@@ -47,10 +52,11 @@ export default function DrawerLayout() {
         },
         headerTitleAlign: 'center',
         headerRight: () => (
+          <Pressable onPress={redirigirInicio}>
           <Image
-            source={require('../../assets/images/logoPetConnect.png')}
-            style={GlobalStyles.imagenLogin}
-          />
+          source={require('../../assets/images/logoPetConnect.png')}
+          style={GlobalStyles.imagenLogin}/>
+          </Pressable>
         ),
       }}
     >
