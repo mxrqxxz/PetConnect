@@ -16,18 +16,18 @@ export const Notificaciones = () => {
                         Mensaje de:{' '}
                     </Text>
                     <Text style={[GlobalStyles.textoNegroNormal, GlobalStyles.textoNegrita]}>
-                        Protectora Perros Abandona2
+                        Perros Abandona2
                     </Text>
                 </View>
             </View>
             <View style={GlobalStyles.notificacion}>
-                <Image style={GlobalStyles.fotoNotificacion} source={require('../../assets/images/manos.png')} />
+                <Image style={GlobalStyles.fotoNotificacion2} source={require('../../assets/images/manos.png')} />
                 <View style={[GlobalStyles.centradoVertical, GlobalStyles.enLinea]}>
                     <Text style={[GlobalStyles.textoNegroNormal, , GlobalStyles.textoNegrita]}>
-                        ToniAnzis{' '}
+                        {'  '}ToniAnzis{' '}
                     </Text>
                     <Text style={GlobalStyles.textoNegroNormal}>
-                        respondió a su post en el foro
+                        respondió a su post
                     </Text>
                 </View>
             </View>

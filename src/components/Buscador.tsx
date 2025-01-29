@@ -21,7 +21,7 @@ export const Buscador = ({ iconoBuscadorRescate, buscadorPequeñoRescate, stylez
         <View style={stylezona}>
             <View style={[stylebuscador1, stylebuscador2]}>
                 <TextInput
-                style={[styleTextoBuscador, azulTextoMediano]}
+                style={styleTextoBuscador}
                 placeholder="Buscar..."
                 value={text}
                 onChangeText={(newText) => setText(newText)}

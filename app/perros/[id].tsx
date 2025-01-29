@@ -112,14 +112,14 @@ const DetallePerros = () => {
         <View style={GlobalStyles.contenedorProtectora}>
           <Image source={perro.fotoEncargada} style={GlobalStyles.fotoEncargada} />
           <View>
-            <Text style={[GlobalStyles.nombreEncargada, GlobalStyles.azulTextoMediano]}>{perro.encargada}</Text>
+            <Text style={GlobalStyles.nombreEncargada}>{perro.encargada}</Text>
             <Text style={GlobalStyles.nombreProtectora}>{perro.protectora}</Text>
           </View>
           <View style={GlobalStyles.contenedorIcono}>
-            <Image source={require("../../assets/images/phone.png")} />
+            <Image style={GlobalStyles.contenedorIconoFoto} source={require("../../assets/images/phone.png")} />
           </View>
           <View style={GlobalStyles.contenedorIcono}>
-            <Image source={require("../../assets/images/mensaje.png")} />
+            <Image style={GlobalStyles.contenedorIconoFoto} source={require("../../assets/images/mensaje.png")} />
           </View>
         </View>
         <Text style={GlobalStyles.descripcion}>{perro.descripcion}</Text>

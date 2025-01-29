@@ -4,7 +4,7 @@ import { GlobalStyles } from "@/src/theme/GlobalStyles";
 export default function Index() {
   return (
     <View style={GlobalStyles.container}>
-      <Text>Patas en marcha</Text>
+      <Text>Patitas en marcha</Text>
     </View>
   );
 }

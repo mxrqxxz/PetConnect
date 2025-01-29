@@ -18,7 +18,9 @@ export default function Index() {
       props: {
         title: "¡Nuevo post!",
         message: "Para enviar un post, revisa tu correo.",
+        
       },
+      position: "bottom",
     });
   };
 
@@ -32,40 +34,45 @@ export default function Index() {
   };
 
   return (
-    <View style={GlobalStyles.containerComunidad}>
-      
-      <View style={GlobalStyles.cartel}>
-        <Image source={require('../../../assets/images/iconoCartel.png')} style={GlobalStyles.iconoCartel} />
-        <Text style={GlobalStyles.tituloCartel}>PATITAS EN MARCHA (eventos)</Text>
-        <Text style={GlobalStyles.textoCartel}>
-          Descubre eventos solidarios creados por la comunidad: actividades deportivas, caminatas y mucho más. 🐾 Cada participación suma para ayudar a los animales que más lo necesitan. ¡Únete y sé parte del cambio!
-        </Text>
-      </View>
-      <Text style={[GlobalStyles.textoAzulGrande, GlobalStyles.marginLeft20]}>Temas de discusión</Text>
-
-      <FlatList
+    <FlatList
         data={posts}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => {
-          return (
-            <View style={GlobalStyles.itemPosts}>
-              <Text style={GlobalStyles.tituloPost}>{item.titulo}</Text>
-              <Text style={GlobalStyles.comentarioPeli}>{item.comentarios}</Text>
-              <Image source={require('../../../assets/images/bocadillo.png')} style={GlobalStyles.bocadillo} />
-            </View>
-          );
-        }}
-        contentContainerStyle={GlobalStyles.flatListContent} 
-      />
+        ListHeaderComponent={
+        <View style={GlobalStyles.containerComunidad}>
+                
+        <View style={GlobalStyles.cartel}>
+          <Image source={require('../../../assets/images/iconoCartel.png')} style={GlobalStyles.iconoCartel} />
+          <Text style={GlobalStyles.tituloCartel}>PATITAS EN MARCHA (eventos)</Text>
+          <Text style={GlobalStyles.textoCartel}>
+            Descubre eventos solidarios creados por la comunidad: actividades deportivas, caminatas y mucho más. 🐾 Cada participación suma para ayudar a los animales que más lo necesitan. ¡Únete y sé parte del cambio!
+          </Text>
+        </View>
+        <Text style={[GlobalStyles.textoSeccion, GlobalStyles.marginLeft20]}>Temas de discusión</Text>
 
-      <Boton 
-          onPress={mostrarCustomToast}
-          style={GlobalStyles.botonComunidad}
-          textStyle={GlobalStyles.textoBotonComunidad}
-      >
-          Nuevo
-      </Boton>
-      <Toast config={toastConfig} />
-    </View>
+      </View>
+      }
+      renderItem={({ item }) => {
+        return (
+          <View style={GlobalStyles.itemPosts}>
+            <Text style={GlobalStyles.tituloPost}>{item.titulo}</Text>
+            <Text style={GlobalStyles.comentarioPeli}>{item.comentarios}</Text>
+            <Image source={require('../../../assets/images/bocadillo.png')} style={GlobalStyles.bocadillo} />
+          </View>
+        );
+      }}
+      contentContainerStyle={GlobalStyles.flatListContent}
+      ListFooterComponent={
+        <View>
+          <Boton
+            onPress={mostrarCustomToast}
+            style={GlobalStyles.botonComunidad}
+            textStyle={GlobalStyles.textoBotonComunidad}
+          >
+            Nuevo
+          </Boton>
+          <Toast config={toastConfig} />
+        </View>
+      }
+    />
   );
 }

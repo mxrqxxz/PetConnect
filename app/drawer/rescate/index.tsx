@@ -72,7 +72,6 @@ export default function Index() {
         stylebuscador1={GlobalStyles.marginLeftTop20}
         stylebuscador2={GlobalStyles.buscadorRescate}
         styleTextoBuscador={GlobalStyles.textoBuscadorRescate}
-        azulTextoMediano={GlobalStyles.azulTextoMediano}
         buscadorPequeñoRescate={GlobalStyles.buscadorPequeñoRescate}
         iconoBuscadorRescate={GlobalStyles.iconoBuscadorRescate}
       />
@@ -91,7 +90,7 @@ export default function Index() {
       <Boton 
           onPress={mostrarCustomToast} 
           style={GlobalStyles.botonRescate}
-          textStyle={[GlobalStyles.textoBotonRescate, GlobalStyles.azulTextoMediano]}
+          textStyle={GlobalStyles.textoBotonRescate}
       >
           Enviar
       </Boton>

@@ -34,7 +34,7 @@ export default function Index() {
         <Image source={require("@/assets/images/huellaBlanca.png")} style={[GlobalStyles.huella2, GlobalStyles.huellaCompartido]} />
         <View style={GlobalStyles.cuadro}>
           <TextInput
-            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoMediano]}
+            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoPequeño]}
             placeholder="Nombre"
             value={nombre}
             onChangeText={(newText) => setNombre(newText)}
@@ -42,7 +42,7 @@ export default function Index() {
         </View>
         <View style={GlobalStyles.cuadro}>
           <TextInput
-            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoMediano]}
+            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoPequeño]}
             placeholder="Email"
             value={email}
             onChangeText={(newText) => setEmail(newText)}
@@ -50,7 +50,7 @@ export default function Index() {
         </View>
         <View style={GlobalStyles.cuadro}>
           <TextInput
-            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoMediano]}
+            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoPequeño]}
             placeholder="Contraseña"
             value={contraseña}
             onChangeText={(newText) => setContraseña(newText)}
@@ -58,7 +58,7 @@ export default function Index() {
         </View>
         <View style={GlobalStyles.cuadro}>
           <TextInput
-            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoMediano]}
+            style={[GlobalStyles.marginLeft20, GlobalStyles.azulTextoPequeño]}
             placeholder="Repetir contraseña"
             value={repetirContraseña}
             onChangeText={(newText) => setRepetirContraseña(newText)}
